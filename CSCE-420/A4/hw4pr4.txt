@@ -1,0 +1,40 @@
+# Raymond Zhu
+# 923008555
+# CSCE 420
+# Due: May 1, 2018
+# hw4pr4.txt
+
+a)  From the given values we know that:
+
+    Each camera has 512 x 512 pixels on a 10 x 10 square sensor
+    The lense of each camera has a focal length of 16 cm
+    The cameras are 1 meter apart and are parallel to each other. 
+
+    To calculate the largest disparity at a distance of 16 meters, similar triangles can be used.
+    Since, the cameras are 1 meter apart, the middle point would a distance of 0.5 meters. And so, 
+    a triangle with w = 16 m, h = 0.5 m equates to a similar triangle with w = 16 cm, h = 0.5 cm. 
+
+    Since the sensor is a square, the disparity needs to be multiplied by 2, where the disparity = 1.0 cm. 
+
+    The calculation would look something like this:
+    
+        Disparity = 2 * (512)/(10) * 16 * (0.5/16) = 51.2
+
+    With the camera using a 512 x 512 pixels on a 10 x 10 square sensor, at a distance of 16 meters, the disparity would be 51.2 pixels
+
+b)  Similarly using the equation above, we can calculate a distance by plugging in pixel disparity. 
+    The question asks for a distance resolution at 16 meters for pixel spaceing. Since the distance is the same as part a, we know that the
+    disparity is 51.2. And so, we can compare the two distances for the disparities of 52 and 51. 
+
+    Plugging in the values we get:
+
+        52 = 2 * (512)/(10) * 16 * (0.5/x), we get that x = 15.75 meters
+        51 = 2 * (512)/(10) * 16 * (0.5/x), we get that x = 16.06 meters
+
+    The difference between these two values gives us 31 cm. 
+
+c)  We can plug in values into the equation to calculate the distance for a disparity of 1 pixel 
+    Plugging in the values we get:
+
+        1 = 2 * (512)/(10) * 16 * (0.5/x), we get that x = 819.2 meters
+   

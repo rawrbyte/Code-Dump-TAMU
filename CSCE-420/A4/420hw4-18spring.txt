@@ -1,0 +1,142 @@
+(Print this page as a cover sheet for your printouts)
+
+CSCE 420 HOMEWORK 4 (FINAL)
+Dr. Daugherity
+Due: 11:59 P.M. Tuesday, May 1, 2018
+
+"On my honor, as an Aggie, I have neither given nor received any unauthorized 
+aid on any portion of the academic work included in this assignment."
+
+
+________________________________	________________________________
+Typed or printed name of student	           Signature of student
+
+NOTE:  Please follow your lab instructor's directions for submitting your 
+assignment through CSNET.  ONLY ASSIGNMENTS SUBMITTED TO CSNET WILL BE GRADED!
+Make a printout of each source file and staple it behind this cover sheet.
+Sign it and turn it in to Han Wang's mailbox (in the hallway near HRBB 312) by
+5:00 P.M. Wednesday.  IF YOU DO NOT TURN IN A SIGNED COVER SHEET YOUR WORK WILL
+NOT BE GRADED!
+
+NOTE:  Homework will be graded on compute.cse.tamu.edu, using g++7.2.0 with 
+-std=c++17, or javac and java, or python3.6 (not python or python2 or 
+python3).
+
+You are free to develop your programs on any other platform, but it is your 
+responsibility to make sure your programs also compile and execute correctly
+on compute.cse.tamu.edu as specified.
+
+NOTE:  Each file submitted (hw4pr1.cpp, etc.--see below) must begin as
+follows:
+//Your name
+//Your UIN
+//CSCE 420
+//Due: May 1, 2018
+//hw4pr1.cpp (or whatever this file name is)
+
+NOTE:  Also write a README.txt file with whatever information is needed to
+compile and run your programs.  Zip the README.txt and the homework files into
+a single file named hw4.zip and submit to CSNET.
+
+The grade for this lab will be based on style (formatting, variable names, 
+comments, etc.), syntax (no compilation or link errors), and correctness 
+(passes all test cases).  Your grade for this lab is:
+Problem #	 1       2       3       4 
+Style             /2      /4      /4      /2 
+Syntax            /3      /6      /6      /3 
+Correctness       /5      /10     /10     /5
+-------------------------------------------------------------------
+Total             /10     /20     /20     /10
+Grand total _____/50
+
+1. (10 points) Write a program named hw4pr1.cpp, etc., to print the truth table
+for the FuzzyImplies function corresponding to FuzzyAnd(X,Y) = min(X,Y), for
+X and Y equal to 0, 0.25, .5, .75, and 1.  Hint: There are 25 lines in this
+truth table.
+
+2. (20 points) Dependencies occur in programming languages which require 
+variable names and function names to be declared above the point of use, and
+also in linking object files to previously loaded object files.  Such 
+dependencies can be specified by a partial order, which is a list of ordered 
+pairs [left, right] which you can think of as meaning left<=right.  So the load
+order of some program (.exe or a.out) must be planned according to the 
+dependencies of its object modules.  Here's an example from Wikipedia:
+
+{[main, parse_options],
+[main, tail_file],
+[main, tail_forever],
+[tail_file, pretty_name],
+[tail_file, write_header],
+[tail_file, tail],
+[tail_forever, recheck],
+[tail_forever, pretty_name],
+[tail_forever, write_header],
+[tail_forever, dump_remainder],
+[tail, tail_lines],
+[tail, tail_bytes],
+[tail_lines, start_lines],
+[tail_lines, dump_remainder],
+[tail_lines, file_lines],
+[tail_lines, pipe_lines],
+[tail_bytes, xlseek],
+[tail_bytes, start_bytes],
+[tail_bytes, dump_remainder],
+[tail_bytes, pipe_bytes],
+[file_lines, dump_remainder],
+[recheck, pretty_name]},
+
+meaning main depends on parse_options, tail_file, and tail_forever, so main
+must be loaded after them. 
+
+Since the loader only loads one module at a time, in what order should it load 
+the modules?  The answer is a "total order," which is a linearization consistent
+with the partial order.  For the example above, there is nothing to load after
+main, so main can be loaded last, but tail_lines must be loaded before tail_file
+(why?).
+
+Depending on the partial order, there may be exactly one possible total order 
+(also called a topological sort), or more than one.  (If the partial order is
+circular then there is no total order.)
+
+Write a program named hw4pr2.cpp, etc., which reads two words per line from
+the keyboard until end of file (Control-D) and outputs a consistent
+linearization.  You can test your program with the example above by deleting
+all the punctuation except underscore; the output would be of the form
+
+main
+...
+tail_file
+...
+tail_lines
+...
+
+(with all the modules listed exactly once), meaning main can be loaded after 
+tail_file and tail_file can be loaded after tail_lines without violating the
+dependencies.
+
+3. (20 points)  N-grams are sequences of N objects such as characters or words
+(see chapter 22).  For example, by counting how many times in a dictionary that
+3-grams of letters occur at the beginning of words, we can predict the most 
+likely third letter of a word from the first two letters. 
+
+Write a program named hw4pr3.cpp, etc., to do this, using the dictionary on 
+compute.cse.tamu.edu in /usr/share/dict/words.  (It contains one word per line,
+but ignore words that are not entirely composed of letters, ignore words with
+fewer than three characters, and ignore case.)  Stop on end of file from the
+keyboard (Control-D).
+
+A sample run of your program should look like this:
+
+Enter first two letters of a word: qu
+The most likely next letter is a.
+
+Enter first two letters of a word: na
+The most likely next letter is t.
+
+Enter first two letters of a word: ^D
+
+
+OPTIONAL EXTRA CREDIT
+=====================
+4. (10 points)  Exercise 24.5 in the textbook.  Write up all steps in your
+calculations as a plain text file named hw4pr4.txt.  Hint: See section 24.4.2.

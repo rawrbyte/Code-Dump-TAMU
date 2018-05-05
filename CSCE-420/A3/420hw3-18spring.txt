@@ -1,0 +1,123 @@
+(Print this page as a cover sheet for your printouts)
+
+CSCE 420 HOMEWORK 3
+Dr. Daugherity
+Section: ______________ 
+Due: 11:59 P.M. Monday, March 19, 2018
+
+"On my honor, as an Aggie, I have neither given nor received any unauthorized 
+aid on any portion of the academic work included in this assignment."
+
+
+________________________________	________________________________
+Typed or printed name of student	           Signature of student
+
+NOTE:  Please follow your lab instructor's directions for submitting your 
+assignment through CSNET.  ONLY ASSIGNMENTS SUBMITTED TO CSNET WILL BE GRADED!
+Make a printout of each source file and staple it behind this cover sheet.
+Sign it and turn it in in class Tuesday.  IF YOU DO NOT TURN IN A SIGNED COVER 
+SHEET YOUR WORK WILL NOT BE GRADED!
+
+NOTE:  Homework will be graded on compute.cse.tamu.edu, using gprolog 1.4.4.
+
+You are free to develop your programs on any other platform, but it is your 
+responsibility to make sure your programs also compile and execute correctly
+on compute.cse.tamu.edu as specified.
+
+NOTE:  Each file submitted (hw3pr1.pl, etc.--see below) must begin as
+follows:
+//Your name
+//Your UIN
+//CSCE 420
+//Due: March 19, 2018
+//hw3pr1.pl (or whatever this file name is)
+
+NOTE:  Also write a README.txt file with whatever information is needed to
+compile and run your programs.  Zip the README.txt and the homework files into
+a single file named hw3.zip and submit to CSNET.
+
+The grade for this lab will be based on style (formatting, variable names, 
+comments, etc.), syntax (no compilation or link errors), and correctness 
+(passes all test cases).  Your grade for this lab is:
+Problem #	 1       2       3       4 
+Style             /2      /4      /4      /2 
+Syntax            /3      /6      /6      /3 
+Correctness       /5      /10     /10     /5
+-------------------------------------------------------------------
+Total             /10     /20     /20     /10
+Grand total _____/50
+
+1. (10 points) Implement the statements in Exercise 7.2 as a PROLOG program
+named hw3pr1.pl which proves the unicorn is magical.
+
+2. (20 points) Complete this PROLOG program to find a path on the map in
+Figure 3.2 between any pair of cities.  Be sure the path you find is acyclic, 
+i.e., has no loops like [a,s,r,p,c,s,r,b].
+
+adjacent(a,t).
+adjacent(a,s).
+adjacent(a,z).
+adjacent(s,o).
+adjacent(s,f).
+adjacent(s,r).
+adjacent(o,a).
+adjacent(f,b).
+adjacent(r,p).
+adjacent(p,b).
+%path(P,Start,Goal) means P is a path from Start to Goal
+path([X,Y],X,Y):-adjacent(X,Y).
+path([X,Y],X,Y):-adjacent(Y,X).
+path([Goal],Goal,Goal).
+path([Start|[Head|Tail]],Start,Goal):-adjacent(Start,Head),path([Head|Tail],Head,Goal).
+
+Name your program hw3pr2.pl.  Hint: PROLOG checks predicates in order, so 
+choose the order carefully.
+
+3. (20 points) Google "British royal family" to add the newer generations
+to Figure 8.7 (e.g., William's wife and children, etc.) and then do Exercise 
+8.14 on page 318 in PROLOG.  However, you do not need to write mth cousin n 
+times removed.  You may add additional predicates if needed.  Follow the PROLOG
+convention of only capitalizing variable names; e.g,
+
+	?- mother(X, charles).
+
+returns X = elizabeth.  You should write enough predicates to deduce
+
+	?- grandchild(X, elizabeth).
+	?- brother_in_law(X, diana).
+	?- great_grandparent(X, zara).
+	?- ancestor(X, eugenie).
+
+as specified, plus
+
+	?- first_cousin(mia,X).
+
+Use the broad definition of ancestor, namely, "person decended from."  Also, 
+call the two Georges "king_george" and "prince_george."  Name your program 
+hw3pr3.pl.
+
+Hints:  Remember gprolog requires that you place all statements for each 
+predicate together.  Also, be careful writing too many statements or you may 
+cause an infinite loop, e.g.,
+
+	child(A, B) :- parent(B, A).
+	parent(A, B) :- child(B, A).
+
+is true logically but may cause PROLOG to loop till stack space is exhausted.
+
+OPTIONAL EXTRA CREDIT
+=====================
+4. (10 points)  Implement Exercise 9.16 parts (a) through (c) as a PROLOG 
+program named hw3pr4.pl, but use the prefix my_, e.g., my_sorted, my_perm, and
+my_sort.  You may not use the builtin PROLOG predicates
+
+permutation
+sort
+msort
+keysort
+min_list
+max_list
+
+(although you may write your own my_ versions of these if you wish).
+
+Hints: Think recursively!  What base case(s) do you need?

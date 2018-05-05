@@ -1,0 +1,133 @@
+(Print this page as a cover sheet for your printouts)
+
+CSCE 420 HOMEWORK 1 
+Dr. Daugherity
+Due: 11:59 P.M. Monday, February 12, 2018
+
+"On my honor, as an Aggie, I have neither given nor received any unauthorized 
+aid on any portion of the academic work included in this assignment."
+
+
+________________________________	________________________________
+Typed or printed name of student	           Signature of student
+
+NOTE:  Please follow your lab instructor's directions for submitting your 
+assignment through CSNET.  ONLY ASSIGNMENTS SUBMITTED TO CSNET WILL BE GRADED!
+Make a printout of each source file and staple it behind this cover sheet.
+Sign it and turn it in in class Tuesday.  IF YOU DO NOT TURN IN A SIGNED COVER 
+SHEET YOUR WORK WILL NOT BE GRADED!
+
+NOTE:  Homework will be graded on compute.cse.tamu.edu, using g++7.2.0 with 
+-std=c++17, or javac and java, or python3 (not python or python2).
+
+You are free to develop your programs on any other platform, but it is your 
+responsibility to make sure your programs also compile and execute correctly on
+compute.cse.tamu.edu as specified.
+
+NOTE:  Each file submitted (hw1pr1.cpp, etc.--see below) must begin as follows:
+//Your name
+//Your UIN
+//CSCE 420
+//Due: February 12, 2018
+//hw1pr1.cpp (or whatever this file name is)
+
+NOTE:  Also write a README.txt file with whatever information is needed to
+compile and run your programs.  Zip the README.txt and the homework files into
+a single file named hw1.zip and submit to CSNET.
+
+The grade for this lab will be based on style (formatting, variable names, 
+comments, etc.), syntax (no compilation or link errors), and correctness 
+(passes all test cases).  Your grade for this lab is:
+Problem #	 1       2       3       4 
+Style             /2      /4      /4      /2 
+Syntax            /3      /6      /6      /3 
+Correctness       /5      /10     /10     /5
+-------------------------------------------------------------------
+Total             /10     /20     /20     /10
+Grand total _____/50
+
+1. (10 points) Design a simple reflex agent for the "vacuum cleaner world" as
+specified on page 38, with the following changes:
+	* The room is rectangular and represented by a matrix of squares (the
+	   floor tiles), with 0 indicating clean and 1 indicating dirty.  Thus
+	   the room in Figure 2.2 has 1 row and 2 columns and the matrix is
+	   [1 1].  The agent is only allowed to see if its current square is
+	   clean or dirty.
+	* The agent is allowed to know the room dimensions and the
+	  fact that it starts in the top left square (row 0, column 0).
+	* The available actions are Left, Right, Up, Down, Suck.  If the
+	  vacuum cleaner hits a wall the move returns failure and the vacuum 
+	  cleaner does not move.
+
+Now write a program named hw1pr1.cpp or Hw1Pr1.java or hw1pr1.py which reads 
+the number of rows, the number of columns, and the rows of the dirt matrix, 
+then runs the agent and outputs the performance measure.  Thus the input for 
+Figure 2.2 would be
+	1
+	2
+	1 1
+
+Take input from the keyboard, but to avoid retyping test cases remember you
+can put data in a file and use Unix redirection.  For example, with C++ you
+can write
+	./a.out <data1.txt
+
+Note: For this problem only, you may assume there are no more than 500 squares.
+
+2. (20 points) Using your agent from problem 1, and a room with 1000 rows and
+1000 columns, calculate the average performance measure over 1000 "random 
+rooms with obstacles."  Each random room is created as follows:
+	* Generate a random number n between 0 and 1000000.
+	* Place a -1 in n random squares to represent obstacles (furniture,
+	  etc.)
+	* Place a 1 (dirt) in all remaining squares.
+
+The agent does not know where the obstacles are until it bumps into them
+(i.e., when a Left/Right/Up/Down move returns failure).
+
+For the performance measure stop at 2000000 actions.
+
+Name your program hw1pr2.cpp or Hw1Pr2.java or hw1pr2.py.
+
+3. (20 points) Write a breadth-first search program to solve 8-puzzle problems
+like that in Figure 3.4 on page 71.  Keep track of the number of nodes expanded
+and print that out along with the steps to solve the problem.  A sample run 
+should look something like this:
+
+	Enter 8-puzzle starting state by rows (0 for blank): 7,2,4,5,0,6,8,3,1
+	Enter ending state by rows (0 for blank): 5,7,4,8,2,6,0,3,1
+	Solution: 
+		Start	7 2 4
+			5 0 6
+			8 3 1
+	Swap the blank
+		Up	7 0 4
+			5 2 6
+			8 3 1
+
+		Left	0 7 4
+			5 2 6
+			8 3 1
+
+		Down	5 7 4
+			0 2 6
+			8 3 1
+
+		Down	5 7 4
+			8 2 6
+			0 3 1
+	Done!  Generated xx states.
+
+Note: To keep the time and memory requirements reasonable, your program only 
+needs to solve 8-puzzle problems which have a solution in 10 moves or less.
+You may use Java or C++ or Python; name your program Hw1Pr3.java or hw1pr3.cpp
+or hw1pr3.py, respectively.  
+
+OPTIONAL EXTRA CREDIT
+=====================
+4. (10 points)  Modify problem 3 to use A* search with Manhattan distance for h;
+e.g., the starting state on page 103 has a Manhattan distance of 18 from the
+goal state (the sum of the number of rows and columns each tile must move from
+its starting position to its ending position).  You should see a reduction in 
+the number of states generated, especially for problems which require more
+moves.  Name your program Hw1Pr4.java or hw1pr4.cpp or hw1pr4.py.

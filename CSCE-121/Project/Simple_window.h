@@ -1,0 +1,42 @@
+
+//
+// This is a GUI support code to the chapters 12-16 of the book
+// "Programming -- Principles and Practice Using C++" by Bjarne Stroustrup
+//
+
+#ifndef SIMPLE_WINDOW_GUARD
+#define SIMPLE_WINDOW_GUARD 1
+
+#include "GUI.h"    // for Simple_window only (doesn't really belong in Window.h)
+#include "Graph.h"
+
+using namespace Graph_lib;
+
+//------------------------------------------------------------------------------
+
+struct Simple_window : Graph_lib::Window {
+	Simple_window(Point xy, int w, int h, const string& title );
+
+	bool wait_for_quit(); // simple event loop
+	bool wait_for_initial();
+	bool wait_for_button();
+
+private:
+	Button initial_button;     // the "next" button
+	Button quit_button;
+	In_box initial;
+	bool button_initial;     // implementation detail
+	bool button_quit;
+
+	static void cb_initial(Address, Address); // callback for next_button
+	static void cb_quit(Address, Address);
+	void name();            // action to be done when next_button is pressed
+	void quit();
+
+
+};
+
+//------------------------------------------------------------------------------
+
+#endif // SIMPLE_WINDOW_GUARD
+
