@@ -51,6 +51,16 @@ public class FileMgr {
          if (filename.startsWith("temp"))
          new File(dbDirectory, filename).delete();
    }
+   
+   public synchronized boolean dropFile(String filename)  {
+      FileChannel fc = openFiles.get(filename);
+      if (fc == null)
+    	  return false;
+      openFiles.remove(filename);
+      if (filename.startsWith(filename))
+    	  new File(dbDirectory, filename + ".tbl").delete(); //delete the file
+      return true;
+ }
 
    /**
     * Reads the contents of a disk block into a bytebuffer.
