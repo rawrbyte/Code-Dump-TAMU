@@ -1,0 +1,6 @@
+javac -cp ".;mysql-connector-java-5.1.44-bin.jar" -d . c932.java
+java -cp ".;mysql-connector-java-5.1.44-bin.jar" c932
+
+
+javac -cp ".;derbyclient.jar" -d . c931.java
+java -cp ".;derbyclient.jar" c931	

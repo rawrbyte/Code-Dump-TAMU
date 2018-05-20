@@ -1,0 +1,15 @@
+To describe time we can look at the speed of cpus where the baseline is 1 ghz representing a second in human time. 
+1 mhz = 16.7 minutes
+1 khz = 
+1 hz = 
+
+
+To describe latency we can look at downloading a file where the baseline is downloading a 1 kb file every second.
+One order of magnitude higher is downloading a file size of 1 mb every second.
+Two orders of magnitude higher is downloading a file size of 1 gb every second.
+Three orders of magnitude higher is downloading a file size of 1 tb every second. 
+
+To describe throughput we can look at a highway ramp where the baseline is one vehicle getting through every second.
+One order of magnitude higher is at noon where many vehicles are getting on and off the highway every second.
+Two orders of magnitude higher is during rush hour where hundred of vehicles line up to get on the ramp every second.
+Three orders of magnitude higher is when an accident occurs during rush hour slowing vehicles entering the ramp every second.
