@@ -1,0 +1,75 @@
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack config --flavors flavor-config.txt: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack config --flavors flavor-config.txt: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack config --flavors flavor-conffig.txt: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack config --flavors flavor-conffig.txt: Failed
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack config --flavors flavor-config.txt: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack config --flavors flavor-config.txt: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack config --flavors flavor-config.txt: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack config --flavors flavor-config.txt: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack config --images image-config.txt: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack config --hardwares hdwr-config.txt: Failed
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack config --hardware hdwr-config.txt: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack config --hardware hdwr-config.txt: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack config --hardware hdwr-config.txt: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack config --hardware hdwr-config.txt: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack config --hardware hdwr-config.txt: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack config --hardware hdwr-config.txt: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack config --images image-config.txt: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack config --flavors flavor-config.txt: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack config --flavors flavor-config.txt: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack config --flavors flavor-config.txt: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack config --hardware hdwr-config.txt: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack config --images image-config.txt: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack show all: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack show hardware: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack show images: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack show flavors: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack show flavors: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py afggiestack show flavors: Failed
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py afggiestack show flavors: Failed
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py afggiestack show flavors: Failed
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack show all: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack show all: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack show all: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack show all: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack config --hardware hdwr-config.txt: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack config --images image-config.txt: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack config --flavors flavor-config.txt: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack show all: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack show all: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack show all: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack show all: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack admin show hardware: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack admin show hardware: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack show all: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack admin can_host dora xlarge: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack admin can_host dora xlarge: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack admin can_host dora xlarge: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack admin can_host dora xlarge: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack admin can_host dora xlarge: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack admin can_host dora xlarge: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack admin can_host dora xlarge: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack admin can_host dora xlarge: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack admin can_host dora xlarge: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack admin can_host dora xlarge: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack admin can_host dora xlarge: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack admin can_host dora xlarge: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack admin can_host dora xlarge: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack admin can_host dora xlarge: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack admin can_host dora xlarge: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack admin can_host dora xlarge: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack admin can_host dora xlarge: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack admin can_host dora xlarge: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack admin can_host dora xlarge: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack admin can_host dora xlarge: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack admin can_host dora xlarge: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack admin can_host dora xlarge: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack admin can_host dora xlarge: Succeeded
+C:/Users/rayzr/Documents/Cloud Computing/489-17-c/P0/script.py aggiestack admin can_host dora xlarge: Succeeded
+script.py aggiestack a: Failed
+script.py aggiestack show all: Succeeded
+script.py aggiestack show hardware: Succeeded
+script.py aggiestack admin can_host m1 small: Succeeded
+script.py aggiestack admin can_host m1 large: Succeeded
+script.py aggiestack admin can_host m1 xlarge: Succeeded
+script.py aggiestack show all: Succeeded

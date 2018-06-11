@@ -1,0 +1,15 @@
+python script.py aggiestack config --hardware hdwr-config.txt
+python script.py aggiestack show hardware
+python script.py aggiestack config --images image-config.txt
+python script.py aggiestack show images
+python script.py aggiestack config --flavors flavor-config.txt
+python script.py aggiestack show flavors
+python script.py aggiestack admin show instances
+python script.py aggiestack server create --image linux-ubuntu --flavor small my-first-instance
+python script.py aggiestack server create --image linux-ubuntu --flavor medium my-second-instance
+python script.py aggiestack admin show instances
+python script.py aggiestack server list
+python script.py aggiestack admin show hardware
+python script.py aggiestack server delete my-first-instance
+python script.py aggiestack admin show instances
+python script.py aggiestack admin show hardware
